@@ -34,12 +34,34 @@ npm install
 
 ### ⚙️ Configure o banco de dados
 
-Crie um arquivo `.env` com:
+Crie um arquivo `.env` com o seguinte conteúdo (ou edite o existente):
 
 ```
-DATABASE_URL="postgresql://USUARIO:SENHA@localhost:5432/NOME_DO_BANCO"
+DATABASE_URL="postgresql://admin:admin@localhost:5432/testehmz"
 JWT_SECRET="sua_chave_secreta"
 ```
+
+> 📌 Este projeto espera que o banco de dados se chame **testehmz** e esteja rodando localmente no PostgreSQL.
+⚠️ Importante: Certifique-se de que existe um usuário no PostgreSQL com:
+
+Usuário: admin
+
+Senha: admin
+
+Caso use outros dados, atualize a variável DATABASE_URL no arquivo .env. e garanta que tenha acesso ao banco.
+
+---
+
+### 🧱 Criando o banco de dados PostgreSQL
+
+1. Certifique-se de que o PostgreSQL está instalado e rodando.
+2. Acesse seu terminal ou client (como PGAdmin) e execute:
+
+```sql
+CREATE DATABASE testehmz;
+```
+
+3. Após isso, rode o comando abaixo para gerar as tabelas:
 
 ### 🔄 Rode as migrations (Prisma)
 
@@ -165,5 +187,5 @@ backend-hmz/
 ## 🧑‍💻 Autor
 
 Desenvolvido por **Eric** ✨  
-🚀 [LinkedIn](https://linkedin.com/in/seu-perfil)  
-📬 eric@email.com
+🚀 [LinkedIn](https://linkedin.com/in/eric-kenzo-wakasugi)  
+📬 ekenzow@hotmail.com
